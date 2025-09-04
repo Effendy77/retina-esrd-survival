@@ -1,0 +1,3 @@
+optimizer: AdamW
+scheduler: cosine
+warmup_epochs: 5

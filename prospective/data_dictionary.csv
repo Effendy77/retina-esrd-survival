@@ -1,0 +1,5 @@
+field,description
+image_path,Left-eye fundus image path
+time,Days to ESRD or censor
+event,1=ESRD,0=censored
+acr,Albumin-creatinine ratio (mg/g)
