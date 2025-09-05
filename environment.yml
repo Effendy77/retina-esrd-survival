@@ -1,1 +1,30 @@
+<<<<<<< HEAD
+name: retina-esrd
+channels: [pytorch, conda-forge, defaults]
+dependencies:
+  - python=3.10
+  - pytorch=2.0.0
+  - torchvision=0.15.1
+  - cudatoolkit=11.8
+  - numpy
+  - pandas
+  - scikit-learn
+  - lifelines==0.27.8
+  - pycox==0.3.0
+  - pyarrow
+  - matplotlib
+  - seaborn
+  - albumentations
+  - timm==0.9.12
+  - pillow
+  - tqdm
+  - shap
+  - pip
+  - pip:
+      - pyYAML
+      - prettytable
+      - black==24.3.0
+      - isodate
+=======
 name: retina-esrd-survival
+>>>>>>> 2fc3584161108c072c8f40e607489f139530620a

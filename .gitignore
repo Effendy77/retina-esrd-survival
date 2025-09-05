@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+.DS_Store
+__pycache__/
+*.pyc
+.checkpoints/
+checkpoints/
+results/
+data/
+.env
+.ipynb_checkpoints/
+*.pth
+*.pt
+=======
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -214,3 +227,4 @@ outputs/**
 *.ckpt
 .DS_Store
 
+>>>>>>> 2fc3584161108c072c8f40e607489f139530620a

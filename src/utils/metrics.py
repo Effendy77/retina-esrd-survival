@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# metrics helpers
+=======
 
 import numpy as np
 from sklearn.metrics import roc_auc_score
@@ -16,3 +19,4 @@ def time_dependent_auc(times, events, scores, t_cut):
     y = ((events == 1) & (times <= t_cut)).astype(int)
     if len(np.unique(y)) < 2: return float("nan")
     return roc_auc_score(y, scores)
+>>>>>>> 2fc3584161108c072c8f40e607489f139530620a

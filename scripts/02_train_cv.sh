@@ -1,0 +1,1 @@
+python -m src.train.train_survival --train_csv data/metadata/train.csv --val_csv data/metadata/val.csv --img_dir data/images_left --weights_path retfound/RETFound_mae_natureCFP.pth --epochs 50 --batch_size 32 --out checkpoints/fold0.pth
