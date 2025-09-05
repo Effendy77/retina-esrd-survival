@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: retina-esrd
 channels: [pytorch, conda-forge, defaults]
 dependencies:
@@ -24,3 +25,6 @@ dependencies:
       - prettytable
       - black==24.3.0
       - isodate
+=======
+name: retina-esrd-survival
+>>>>>>> 2fc3584161108c072c8f40e607489f139530620a
