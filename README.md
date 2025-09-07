@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Retina-ESRD-Survival (RETFound + DeepSurv)
 
 **Target journal:** *EHJ Digital Health*
@@ -53,8 +52,3 @@ python -m src.eval.kfre_compare --pred results/cv_survival_preds.csv --kfre resu
 
 ## Citation
 See `CITATION.cff`.
-=======
-# retina-esrd-survival — v2 with right-eye flip flag
-
-See README for usage.
->>>>>>> 2fc3584161108c072c8f40e607489f139530620a
