@@ -77,6 +77,22 @@ class DeepDKD_Survival(nn.Module):
     def __init__(self, encoder_path=None, freeze_encoder=True):
         super().__init__()
         self.encoder = DeepDKD()
+        # infer encoder embedding size dynamically
+        import torch
+        try:
+            with torch.no_grad():
+                _d = torch.randn(1,3,224,224)
+                _o = self.encoder(_d)
+                if isinstance(_o, (tuple,list)):
+                    _o = _o[0]
+                # handle single-dim outputs
+                if hasattr(_o, 'shape') and len(_o.shape)>1:
+                    self.emb_dim = int(_o.shape[1])
+                else:
+                    self.emb_dim = int(getattr(_o,'shape',(_o,))[0])
+        except Exception:
+            self.emb_dim = 512
+
         if encoder_path and os.path.exists(encoder_path):
             ckpt = torch.load(encoder_path, map_location='cpu')
             state = ckpt.get('state_dict', ckpt)
