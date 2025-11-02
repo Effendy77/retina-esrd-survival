@@ -76,7 +76,7 @@ class DeepDKD_Survival(nn.Module):
     """DeepDKD backbone + Cox head for survival."""
     def __init__(self, encoder_path=None, freeze_encoder=True):
         super().__init__()
-        self.encoder = DeepDKD()
+        self.encoder = DeepDKD(output_size=512)
         # infer encoder embedding size dynamically
         import torch
         try:
