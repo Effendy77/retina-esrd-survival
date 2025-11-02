@@ -129,6 +129,15 @@ class SurvivalDataset(Dataset):
     image_path, duration, event
     """
     def __init__(self, csv_path, img_dir, transform=None):
+        # set default transform if none provided
+        if transform is None:
+            from torchvision import transforms as _transforms
+            transform = _transforms.Compose([
+                _transforms.Resize((224,224)),
+                _transforms.RandomHorizontalFlip(),
+                _transforms.ToTensor(),
+                _transforms.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225]),
+            ])
         import pandas as pd
         self.df = pd.read_csv(csv_path)
         self.img_dir = img_dir
