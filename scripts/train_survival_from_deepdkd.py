@@ -279,6 +279,7 @@ if __name__ == "__main__":
     parser.add_argument("--outdir", type=str, required=True)
     parser.add_argument("--seed", type=int, default=42)
     args = parser.add_argument('--weight_decay', type=float, default=1e-6, help='weight decay for AdamW')
-parser.parse_args()
+if __name__ == '__main__':
+    parser.parse_args()
 
     train(args)
