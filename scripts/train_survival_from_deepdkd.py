@@ -215,7 +215,7 @@ def train(args):
     optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr, weight_decay=args.weight_decay)
     criterion = CoxPHLoss()
 
-    best_val_c = -1.0
+    best_val_c = None
     metrics_file = os.path.join(args.outdir, "metrics_epoch.csv")
     with open(metrics_file, "w") as mf:
         mf.write("epoch,train_loss,val_cindex\n")
