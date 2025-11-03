@@ -212,7 +212,7 @@ def train(args):
     model = DeepDKD_Survival(args.encoder_path, args.freeze_encoder).to(device)
 
     # optimizer and loss
-    optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr, weight_decay=1e-6)
+    optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr, weight_decay=args.weight_decay)
     criterion = CoxPHLoss()
 
     best_val_c = -1.0
