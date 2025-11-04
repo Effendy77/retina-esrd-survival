@@ -12,3 +12,13 @@ data/
 
 # build artifacts
 src/*.egg-info/
+
+# Ignore large outputs and logs
+outputs/cv_pipeline/*.npz
+outputs/final_cox/*
+*.tar.zst
+*.log
+
+# Allow metadata CSVs
+!data/metadata/cv/*.csv
+outputs/
